@@ -1,0 +1,138 @@
+<h2>Settings NUT-Server</h2>
+	<form method="post" data-ajax="false" name="main_form" id="main_form" action="index.cgi">
+		<input type="hidden" name="save" value="save">
+			<div class="form-group">
+				<table class="formtable" border="0" width="100%">
+					<tr>
+						<td width="25%">
+							<label id="labelip1"><b><TMPL_VAR BASIC.NUT_NAME1></b></label>
+						</td>
+						<td width="50%">
+							<input  name="Dev1" type="text" class="textfield"
+								value="<TMPL_VAR NAME=IP1>" data-validation-error-msg="* Please enter IP-Adress">
+						</td>
+						<td width="25%">
+							&nbsp;
+							<font size="-1"><TMPL_VAR BASIC.NUT_HIP></font>
+							<br>&nbsp;<font size="-1">URL: <a href="<TMPL_VAR NAME=WEBIP1>" target=_blank"><TMPL_VAR NAME=WEBIP1></a></font>
+						</td>
+					</tr>
+					<tr>
+						<td width="25%">
+							<label id="labelip2"><b><TMPL_VAR BASIC.NUT_NAME2></b></label>
+						</td>
+						<td width="50%">
+							<input  name="Dev2" type="text" class="textfield"
+								value="<TMPL_VAR NAME=IP2>" data-validation-error-msg="* Please enter IP-Adress">
+						</td>
+						<td width="25%">
+							&nbsp;
+							<font size="-1"><TMPL_VAR BASIC.NUT_HIP></font>
+							<br>&nbsp;<font size="-1">URL: <a href="<TMPL_VAR NAME=WEBIP2>" target=_blank"><TMPL_VAR NAME=WEBIP2></a></font>
+						</td>
+					</tr>
+					<tr>
+						<td width="25%">
+							<label id="labelip3"><b><TMPL_VAR BASIC.NUT_NAME3></b></label>
+						</td>
+						<td width="50%">
+							<input  name="Dev3" type="text" class="textfield"
+								value="<TMPL_VAR NAME=IP3>" data-validation-error-msg="* Please enter IP-Adress">
+						</td>
+						<td width="25%">
+							&nbsp;
+							<font size="-1"><TMPL_VAR BASIC.NUT_HIP></font>
+							<br>&nbsp;<font size="-1">URL: <a href="<TMPL_VAR NAME=WEBIP3>" target=_blank"><TMPL_VAR NAME=WEBIP3></a></font>
+						</td>
+					</tr>
+					<tr>
+						<td width="25%">
+							<label id="labelip4"><b><TMPL_VAR BASIC.NUT_NAME4></b></label>
+						</td>
+						<td width="50%">
+							<input  name="Dev4" type="text" class="textfield"
+								value="<TMPL_VAR NAME=IP4>" data-validation-error-msg="* Please enter IP-Adress">
+						</td>
+						<td width="25%">
+							&nbsp;
+							<font size="-1"><TMPL_VAR BASIC.NUT_HIP></font>
+							<br>&nbsp;<font size="-1">URL: <a href="<TMPL_VAR NAME=WEBIP4>" target=_blank"><TMPL_VAR NAME=WEBIP4></a></font>
+						</td>
+					</tr>
+					<tr>
+						<td width="25%">
+							<label id="labelfbpass"><b>Miniserver:</b></label>
+						</td>
+						<td width="50%">
+							<select id="miniserver" name="miniserver" data-mini="true" onchange="selMS(this);">
+								<TMPL_VAR NAME=LOXLIST>
+							</select>
+						</td>
+						<td width="25%">
+							&nbsp;
+							<font size="-1"><TMPL_VAR BASIC.NUT_HMINISERVER></font>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td width="25%">
+							<label id="labeludpsend"><b><TMPL_VAR BASIC.NUT_SHOWALL></b></label>
+						</td>
+						<td width="50%">
+						<fieldset>
+								<select  name="SHOW_ALL" data-role="flipswitch">
+									<option value="0"<TMPL_VAR NAME=SHOWALLNO>>Aus</option><option value="1" <TMPL_VAR NAME=SHOWALLYES>>Ein</option>\n
+								</select>
+							</fieldset>
+						</td>
+						<td width="25%">
+							&nbsp;
+							<font size="-1"><TMPL_VAR BASIC.NUT_HSHOWALL></font>
+						</td>
+					</tr>
+
+
+
+
+					
+					<tr>
+						<td width="25%">
+							&nbsp;
+						</td>
+						<td width="50%">
+							<center>
+								<a id="btncancel" data-role="button" data-inline="true" data-mini="true" data-icon="delete" href="./index.cgi?form=1">Abbrechen</a>
+								<button type="submit" form="main_form" id="do" data-role="button" data-inline="true" data-mini="true" data-icon="check">Speichern</button>
+								<a id="button" data-icon="info" data-role="button" data-inline="true" data-mini="true" 
+								href="<TMPL_VAR NAME=LOGDATEI>" 
+								target="_blank">Logdatei</a>
+							</center>
+						</td>
+						<td width="25%">
+							&nbsp;
+						</td>
+					</tr>		
+			</table>
+			<table class="formtable" border="0" width="100%">
+					
+					<hr>
+					<tr>
+						<td width="25%">
+							<b><TMPL_VAR BASIC.NUT_SCAN></b>
+						</td>
+						<td colspan=2 width="50%">
+							<a id="button" data-icon="info" data-role="button" data-inline="true" data-mini="true" href="<TMPL_VAR NAME=WEBSTATUS>" target="_blank"><TMPL_VAR BASIC.NUT_SCANBUTTON></a>
+						</td>
+						<td width="25%">
+							<TMPL_VAR BASIC.NUT_HSCAN>
+						</td>
+					</tr>	
+			</tabel>
+		</div>
+	</form>
+
+
+
+
