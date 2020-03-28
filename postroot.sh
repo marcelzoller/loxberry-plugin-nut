@@ -60,18 +60,18 @@ echo "<INFO> Plugin Data folder is: $PDATA"
 echo "<INFO> Plugin Log folder (on RAMDISK!) is: $PLOG"
 echo "<INFO> Plugin CONFIG folder is: $PCONFIG"
 
-echo "<INFO> NUT config copy /etc/nut/"
-sudo cp /opt/loxberry/config/plugins/nut/ups.conf /etc/nut/
-sudo cp /opt/loxberry/config/plugins/nut/upsd.conf /etc/nut/
-sudo cp /opt/loxberry/config/plugins/nut/nut.conf /etc/nut/
+echo "<INFO> Plugin NUT config copy to /etc/nut/"
+sudo cp $PCONFIG/ups.conf /etc/nut/
+sudo cp $PCONFIG/upsd.conf /etc/nut/
+sudo cp $PCONFIG/nut.conf /etc/nut/
 sudo cp /lib/udev/rules.d/62-nut-usbups.rules /etc/udev/rules.d/
-echo "<INFO> NUT start upsdrvctl"
+echo "<INFO> Plugin NUT start upsdrvctl"
 sudo upsdrvctl start
-echo "<INFO> NUT stop upsd"
+echo "<INFO> Plungin NUT stop upsd"
 sudo upsd -c stop
 echo "<INFO> NUT start upsd"
 sudo upsd
-echo "<INFO> NUT Abfrgae ups@localhost"
+echo "<INFO> Plugin NUT Abfrgae ups@localhost"
 sudo upsc ups@localhost
 
 # Exit with Status 0
